@@ -9,12 +9,21 @@ class ContaCorrente{
   agencia
   saldo
 
-
   sacar(valor){
 
     if(this.saldo >= valor){
 
       this.saldo -= valor 
+    }
+
+    return valor
+  }
+
+  depositar(valor){
+
+    if(valor > 0){
+
+      this.saldo += valor 
     }
 
     return valor
@@ -35,7 +44,4 @@ contaCorrenteRicardo.saldo = 10
 
 let valorSacado = 200;
 contaCorrenteRicardo.sacar(valorSacado)
-
-console.log(contaCorrenteRicardo.saldo)
-console.log(cliente1)
-console.log(cliente2)
+contaCorrenteRicardo.depositar(100)
